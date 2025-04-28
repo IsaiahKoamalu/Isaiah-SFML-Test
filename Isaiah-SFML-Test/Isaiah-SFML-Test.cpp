@@ -9,6 +9,9 @@
 using namespace std;
 using namespace sf;
 
+//Global Variables
+static const float speedTemp = 30.0f; //Define speed
+static const float speed = speedTemp * 0.001; //Scale speed down
 static bool hasKey = false;
 static bool displayInventory = false;
 static int spawnPoint = 0; // 0 = Main Chamber, 1 = Control Room, 2 = Security Room, 3 = Analysis Lab
@@ -340,8 +343,7 @@ void mainChamber(sf::RenderWindow& window, sf::Font& font) {
 	texture.loadFromFile("C:\\Users\\ikbro\\Desktop\\Sprites\\entity_idle.png");
 	int xPos = 0;
 	int yPos = 0;
-	const float speed_temp = 30.0f;//Define speed
-	const float speed = speed_temp * 0.001; //Scale speed down
+	
 	sf::Sprite sprite(texture);
 	sprite.setScale(3.f, 3.f);
 	//Handling spawn point
@@ -437,8 +439,7 @@ void controlRoom(sf::RenderWindow& window, sf::Font& font) {
 	texture.loadFromFile("C:\\Users\\ikbro\\Desktop\\Sprites\\entity_idle.png");
 	int x_pos = 100;
 	int y_pos = 300;
-	const float speed_temp = 30.0f;//Define speed
-	const float speed = speed_temp * 0.001; //Scale speed down
+	
 	sf::Sprite sprite(texture);
 	sprite.setScale(3.f, 3.f);
 	sf::Vector2f position(x_pos, y_pos);//Current sprite position
@@ -521,8 +522,7 @@ void securityRoom(sf::RenderWindow& window, sf::Font& font) {
 	texture.loadFromFile("C:\\Users\\ikbro\\Desktop\\Sprites\\entity_idle.png");
 	int x_pos = 200;
 	int y_pos = 300;
-	const float speed_temp = 30.0f;//Define speed
-	const float speed = speed_temp * 0.001; //Scale speed down
+	
 	sf::Sprite sprite(texture);
 	sprite.setScale(3.f, 3.f);
 	sf::Vector2f position(x_pos, y_pos);//Current sprite position
@@ -603,8 +603,7 @@ void analysisLab(sf::RenderWindow& window, sf::Font& font, Door& controlRoomRef)
 	texture.loadFromFile("C:\\Users\\ikbro\\Desktop\\Sprites\\entity_idle.png");
 	int x_pos = 325;
 	int y_pos = 500;
-	const float speed_temp = 30.0f;//Define speed
-	const float speed = speed_temp * 0.001; //Scale speed down
+	
 	sf::Sprite sprite(texture);
 	sprite.setScale(3.f, 3.f);
 	sf::Vector2f position(x_pos, y_pos);//Current sprite position
